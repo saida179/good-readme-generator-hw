@@ -54,3 +54,15 @@ function promptUser() {
 //WHEN I enter my email address
 
 //WHEN I click on the links in the Table of Contents
+
+// function to write README file
+function writeToFile(fileName, data) {
+}
+
+// function to initialize program
+function init() {
+
+}
+
+// function call to initialize program
+init();
