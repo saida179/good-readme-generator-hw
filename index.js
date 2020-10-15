@@ -1,14 +1,11 @@
-//GIVEN a command-line application that accepts user input
 const inquirer = require("inquirer");
 const fs = require("fs");
-const util = require("util");
+//const util = require("util");
 
-const writeFileAsync = util.promisify(fs.writeFile);
+//const writeFileAsync = util.promisify(fs.writeFile);
 
-//WHEN I am prompted for information about my application repository
-
-function promptUser() {
-  return inquirer.prompt([
+//async function generateHTML() {
+  const question = [
     {
       type: "input",
       name: "title",
@@ -22,31 +19,33 @@ function promptUser() {
     {
       type: "input",
       name: "installation instructions",
-      message: "?"
+      message: "what are the installation instructions for the user?"
     },
     {
       type: "input",
       name: "usage information",
-      message: "What is your favorite food?"
+      message: "what will be the usage instructions?"
     },
     {
       type: "input",
       name: "contribution guidelines",
-      message: ""
+      message: "How can the user contribute"
     },
     {
       type: "input",
       name: "test instructions",
-      message: ""
+      message: "Enter your test instructions"
     },
     {
-        type: "input",
-        name: "question",
-        message: "?"
+      type: "input",
+      name: "Email",
+      message: "Enter your email address"
+    },
+    {
+      type: "input",
+      name: "GitHub",
+      message: "Enter your GitHub username"
     }
-  ]);
-}
-
 //WHEN I choose a license for my application from a list of options
 
 //WHEN I enter my GitHub username
@@ -54,6 +53,14 @@ function promptUser() {
 //WHEN I enter my email address
 
 //WHEN I click on the links in the Table of Contents
+  ];
+  //const answers = await inquirer.prompt(question);
+  //console.log(answers)
+
+
+//}
+
+//generateHTML();
 
 // function to write README file
 function writeToFile(fileName, data) {
