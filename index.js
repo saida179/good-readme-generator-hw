@@ -1,10 +1,11 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
-//const util = require("util");
+const util = require("util");
 
-//const writeFileAsync = util.promisify(fs.writeFile);
+//please note that I was not able to take off async without braking my code... 
+const writeFileAsync = util.promisify(fs.writeFile);
 
-//async function generateHTML() {
+async function generateHTML() {
   const question = [
     {
       type: "input",
@@ -54,13 +55,13 @@ const fs = require("fs");
 
 //WHEN I click on the links in the Table of Contents
   ];
-  //const answers = await inquirer.prompt(question);
+  const answers = await inquirer.prompt(question);
   //console.log(answers)
 
 
-//}
+}
 
-//generateHTML();
+generateHTML();
 
 // function to write README file
 function writeToFile(fileName, data) {
