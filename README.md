@@ -7,6 +7,10 @@ Describe what your project will be.
 
 and other question...
 
+![Alt Text](https://media.giphy.com/media/vFKqnCdLPNOKc/giphy.gif)
+
+![Alt Text](https://media.giphy.com/media/vFKqnCdLPNOKc/giphy.gif)
+
 ## User Story
 
 ```
@@ -16,4 +20,6 @@ SO THAT can quickly create a professional README for a new project
 ```
 
 ## Work citation
+```
 I used the mini-project as reference as well as the Unit 9 CheatSheet
+```
