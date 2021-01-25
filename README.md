@@ -1,25 +1,2 @@
-# good-readme-generator-hw
-For this assignment I created a README generator by using node. 
-this will help developers generate a README where it will as basic questions.
-For Example 
-Whats your project name?
-Describe what your project will be.
-
-and other question...
-
-![Alt Text](/asset/demo.gif)
-
-![Alt Text](https://media.giphy.com/media/vFKqnCdLPNOKc/giphy.gif)
-
-## User Story
-
-```
-AS A developer
-I WANT a README generator
-SO THAT can quickly create a professional README for a new project
-```
-
-## Work citation
-```
-I used the mini-project as reference as well as the Unit 9 CheatSheet
-```
+# 
+![badge](https://img.shields.io/badge/license-APACHE%202.0-blue)

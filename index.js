@@ -3,6 +3,7 @@ const inquirer = require("inquirer");
 const fs = require("fs");
 const util = require("util");
 const writeFileAsync = util.promisify(fs.writeFile);
+const generateMarkdown = require("./utils/generateMarkdown");
 
 function promptUser() {
   return inquirer.prompt([
@@ -45,21 +46,40 @@ function promptUser() {
       type: "input",
       name: "GitHub",
       message: "Enter your GitHub username"
+    },
+    {
+      type: "list",
+      name: "licence",
+      message: "what licence who you like to use",
+      choices: [
+        {
+          name: "MIT",
+          value: "MIT"
+        },
+        {
+          name: "APACHE 2.0",
+          value: "APACHE%202.0"
+        },
+        {
+          name: "GPL",
+          value: "GPL"
+        }]
     }
 
   ]);
 }
 
 async function init() {
-  try{
-      const data = await promptUser();
-      const newMD = generateMarkdown(data);
+  try {
+    const data = await promptUser();
+    const newMD = generateMarkdown(data);
 
-      await writeFileAsync('README.md', newMD, 'utf-8');
-      console.log('Creating a New README.md file!');
+    writeFileAsync('README.md', newMD, 'utf-8');
+    console.log('Creating a New README.md file!');
+    console.log(data)
   }
-  catch(error) {
-      console.log(error);
+  catch (error) {
+    console.log(error);
   }
 }
 
